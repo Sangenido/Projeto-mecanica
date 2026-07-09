@@ -1,0 +1,642 @@
+/* ================================
+   RESET E BASE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ================================
+   BOTÕES GLOBAIS
+================================ */
+
+.btn {
+    display: inline-block;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+.btnred {
+    display: inline-block;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+    background-color: #e63b2e;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #e63b2e;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.btnred:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+/* ================================
+   TIPOGRAFIA GLOBAL
+================================ */
+
+.section-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #e63b2e;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 140px 60px 80px;
+    position: relative;
+    background-color: #0a0a0a;
+}
+
+.imgheader {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.80) 100%
+    ), url('img/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .subtitulo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    color: #e63b2e;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.hero h1 span {
+    color: #e63b2e;
+}
+
+.hero .descricao {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1.05rem;
+    color: #888;
+    max-width: 480px;
+    line-height: 1.7;
+    margin: 24px 0 40px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ================================
+   DIFERENCIAIS
+================================ */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.feature-card {
+    padding: 40px 32px;
+    border-right: 1px solid #1a1a1a;
+}
+
+.feature-card:last-child {
+    border-right: none;
+}
+
+.feature-card h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.feature-card p {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ================================
+   SERVIÇOS
+================================ */
+
+.services {
+    padding: 100px 60px;
+    background-color: #0a0a0a;
+}
+
+.services h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 56px;
+    letter-spacing: -0.5px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.service-card {
+    background-color: #111;
+    border: 1px solid #1a1a1a;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.service-card:hover {
+    border-color: #e63b2e;
+}
+
+.imgService {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%);
+    transition: filter 0.3s;
+}
+
+.service-card:hover .imgService {
+    filter: grayscale(0%);
+}
+
+.service-content {
+    padding: 28px;
+}
+
+.service-content span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: #e63b2e;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.service-content h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.service-content p {
+    font-size: 0.88rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Página de serviços completa */
+.services-full {
+    padding: 60px 60px 100px;
+    background-color: #0f0f0f;
+}
+
+.page-hero {
+    padding: 140px 60px 60px;
+    min-height: auto;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.page-hero h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+/* ================================
+   SOBRE NÓS
+================================ */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 100px 60px;
+    align-items: center;
+    background-color: #0f0f0f;
+}
+
+.about-img img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border: 1px solid #1a1a1a;
+    filter: grayscale(20%);
+}
+
+.about-content h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+}
+
+.about-content p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.about-years {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.about-years h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #e63b2e;
+    line-height: 1;
+}
+
+.about-years p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: #555;
+    text-transform: uppercase;
+    margin: 6px 0 0;
+}
+
+/* ================================
+   DEPOIMENTOS
+================================ */
+
+.testimonials {
+    padding: 100px 60px;
+    background-color: #0a0a0a;
+    border-top: 1px solid #1a1a1a;
+}
+
+.section-title {
+    margin-bottom: 56px;
+}
+
+.section-title p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #e63b2e;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.3px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.testimonial-card {
+    background-color: #111;
+    border: 1px solid #1a1a1a;
+    padding: 36px;
+    transition: border-color 0.3s;
+}
+
+.testimonial-card:hover {
+    border-color: #2a2a2a;
+}
+
+.testimonial-card p {
+    font-size: 0.95rem;
+    color: #888;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.testimonial-card h4 {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.testimonial-card span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #e63b2e;
+    text-transform: uppercase;
+}
+
+/* ================================
+   CONTATO
+================================ */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 100px 60px;
+    align-items: start;
+    background-color: #0f0f0f;
+    border-top: 1px solid #1a1a1a;
+}
+
+.contact-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 140px 60px 100px;
+    align-items: start;
+    background-color: #0f0f0f;
+}
+
+.contact-info h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+}
+
+.contact-info > p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 36px;
+}
+
+.contact-info ul li {
+    font-size: 0.9rem;
+    color: #555;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Mapa */
+.contact-map {
+    padding: 0 60px 80px;
+    background-color: #0f0f0f;
+}
+
+.mapa-responsivo {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #1a1a1a;
+}
+
+.mapa-responsivo iframe {
+    width: 100%;
+    height: 380px;
+    border: 0;
+    display: block;
+    filter: grayscale(80%) invert(90%);
+}
+
+/* Formulário de contato */
+.contact-form h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form select {
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 2px;
+    padding: 12px 16px;
+    color: #fff;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: #e63b2e;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form select option {
+    background-color: #111;
+}
+
+.contact-form input[type="submit"],
+.contact-form input[type="date"] {
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 2px;
+    padding: 12px 16px;
+    color: #fff;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.9rem;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #e63b2e;
+    border-color: #e63b2e;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* ================================
+   AGENDAMENTO
+================================ */
+
+.contact-form input[type="date"]:focus {
+    outline: none;
+    border-color: #e63b2e;
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 120px 24px 60px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-card {
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    .services,
+    .services-full,
+    .page-hero,
+    .about,
+    .testimonials,
+    .contact,
+    .contact-page,
+    .contact-map {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-img img {
+        height: 300px;
+    }
+
+    .contact,
+    .contact-page {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 110px 20px 50px;
+        min-height: auto;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .btn-container a {
+        text-align: center;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        border-right: none;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
