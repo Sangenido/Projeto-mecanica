@@ -6,7 +6,7 @@
 CREATE DATABASE IF NOT EXISTS bd_mecanica;
 USE bd_mecanica;
 
--- Tabela de usuários (completa desde etapa 2)
+-- Tabela de usuários 
 CREATE TABLE IF NOT EXISTS usuarios (
     id    INT AUTO_INCREMENT PRIMARY KEY,
     nome  VARCHAR(100) NOT NULL,
