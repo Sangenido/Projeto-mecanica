@@ -14,7 +14,7 @@ require 'includes/header.php';
                 <h2>Vamos cuidar do seu veículo?</h2>
                 <p>Entre em contato para agendar uma avaliação ou solicitar um orçamento.</p>
                 <ul>
-                    <li>📍 Porto Alegre - RS</li>
+                    <li>📍 Rua Banco Inglês, 377 — Santa Teresa, Porto Alegre - RS</li>
                     <li>📞 (51) 99999-9999</li>
                     <li>✉ contato@box377oficina.com.br</li>
                 </ul>

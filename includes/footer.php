@@ -32,6 +32,7 @@
                 <h4>Contato</h4>
                 <ul>
                     <li>(51) 99999-9999</li>
+                    <li>Rua Banco Inglês, 377 — Santa Teresa</li>
                     <li>Porto Alegre - RS</li>
                 </ul>
             </div>
